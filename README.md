@@ -1,4 +1,4 @@
-# bcrypt
+# BCrypt
 
 ![Swift](http://img.shields.io/badge/swift-3.1-brightgreen.svg)
 [![CircleCI](https://circleci.com/gh/vapor/bcrypt.svg?style=shield)](https://circleci.com/gh/vapor/bcrypt)
