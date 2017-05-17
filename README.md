@@ -29,7 +29,7 @@ print(result)
 
 ## 📖 Documentation
 
-Visit the Vapor web framework's [documentation](http://docs.vapor.codes) for instructions on how to use this package. 
+Visit the Vapor web framework's [documentation](https://docs.vapor.codes) for instructions on how to use this package. 
 
 ## 💧 Community
 
