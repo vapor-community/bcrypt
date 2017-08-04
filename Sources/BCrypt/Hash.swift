@@ -82,13 +82,13 @@ public final class Hash {
         j = 0
         for i in 0..<clen {
             #if swift(>=4)
-                result[j] = UInt8(extendingOrTruncating: (cdata[i] >> 24) & 0xff)
+                result[j] = UInt8(truncatingIfNeeded: (cdata[i] >> 24) & 0xff)
                 j += 1
-                result[j] = UInt8(extendingOrTruncating: (cdata[i] >> 16) & 0xff)
+                result[j] = UInt8(truncatingIfNeeded: (cdata[i] >> 16) & 0xff)
                 j += 1
-                result[j] = UInt8(extendingOrTruncating: (cdata[i] >> 8) & 0xff)
+                result[j] = UInt8(truncatingIfNeeded: (cdata[i] >> 8) & 0xff)
                 j += 1
-                result[j] = UInt8(extendingOrTruncating: cdata[i] & 0xff)
+                result[j] = UInt8(truncatingIfNeeded: cdata[i] & 0xff)
                 j += 1
             #else
                 result[j] = UInt8(truncatingBitPattern: (cdata[i] >> 24) & 0xff)
