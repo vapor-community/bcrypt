@@ -1,11 +1,18 @@
-// swift-tools-version:3.1
+// swift-tools-version:4.0
 
 import PackageDescription
 
 let package = Package(
     name: "BCrypt",
+    products: [
+        .library(name: "BCrypt", targets: ["BCrypt"]),
+    ],
     dependencies: [
         // Module for generating random bytes and numbers.
-        .Package(url: "https://github.com/vapor/random.git", majorVersion: 1),
+        .package(url: "https://github.com/vapor/random.git", .branch("beta")),
+    ],
+    targets: [
+        .target(name: "BCrypt", dependencies: ["Random"]),
+        .testTarget(name: "BCryptTests", dependencies: ["BCrypt"]),
     ]
 )
