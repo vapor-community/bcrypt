@@ -40,11 +40,21 @@ public final class Hash {
     }
 
     deinit {
+        #if swift(>=4.1)
+        p.deinitialize(count: Key.p.count)
+        p.deallocate()
+        #else
         p.deinitialize()
         p.deallocate(capacity: Key.p.count)
+        #endif
 
+        #if swift(>=4.1)
+        s.deinitialize(count: Key.s.count)
+        s.deallocate()
+        #else
         s.deinitialize()
         s.deallocate(capacity: Key.s.count)
+        #endif
     }
 
     public func digest(message: Bytes) -> Bytes {
