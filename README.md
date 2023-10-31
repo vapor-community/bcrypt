@@ -4,6 +4,9 @@
 [![CircleCI](https://circleci.com/gh/vapor/bcrypt.svg?style=shield)](https://circleci.com/gh/vapor/bcrypt)
 [![Slack Status](http://vapor.team/badge.svg)](http://vapor.team)
 
+> Note: This repo is now archived as we've migrated to a [C implementation inside Vapor](https://github.com/vapor/vapor/tree/4.84.6/Sources/CVaporBcrypt) for performance reasons
+
+
 Swift implementation of the BCrypt password hashing function used in [Vapor](https://github.com/vapor/vapor)'s packages.
 
 ## Usage
